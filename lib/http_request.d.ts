@@ -1,8 +1,9 @@
-import {Endpoint} from './endpoint';
+import { Endpoint } from './endpoint';
 /**
  * The low level HTTP request object, encapsulating all HTTP header and body data sent by a service request.
  */
 export class HttpRequest {
+    constructor(endpoint?: Endpoint, region?: string);
     /**
      * The part of the path excluding the query string.
      */
@@ -33,4 +34,8 @@ export class HttpRequest {
      * The path portion of the URI, e.g., "/list/?start=5&num=10".
      */
     path: string;
+    /**
+     * The region, for signing purposes only.
+     */
+    region: string;
 }

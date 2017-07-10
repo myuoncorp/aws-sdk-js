@@ -24,7 +24,7 @@ export class HttpRequest {
      * A map of header keys and their respective values.
      */
     headers: {
-        [key: string]: string;
+        [key: string]: string | boolean;
     }
     /**
      * The HTTP method of the request.
